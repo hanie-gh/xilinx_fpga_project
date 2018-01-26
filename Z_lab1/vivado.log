@@ -1,0 +1,105 @@
+#-----------------------------------------------------------
+# Vivado v2017.4 (64-bit)
+# SW Build 2086221 on Fri Dec 15 20:55:39 MST 2017
+# IP Build 2085800 on Fri Dec 15 22:25:07 MST 2017
+# Start of session at: Fri Jan 26 15:13:33 2018
+# Process ID: 7900
+# Current directory: D:/Project/warmup/vivado/Z_lab1
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent8084 D:\Project\warmup\vivado\Z_lab1\Z_lab1.xpr
+# Log file: D:/Project/warmup/vivado/Z_lab1/vivado.log
+# Journal file: D:/Project/warmup/vivado/Z_lab1\vivado.jou
+#-----------------------------------------------------------
+start_gui
+open_project D:/Project/warmup/vivado/Z_lab1/Z_lab1.xpr
+Scanning sources...
+Finished scanning sources
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1704] No user IP repositories specified
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'F:/Tools/Vivado201704/Vivado/2017.4/data/ip'.
+set_property board_part digilentinc.com:zybo:part0:1.0 [current_project]
+WARNING: [Project 1-153] The current project part 'xc7vx690tffg1157-2' does not match with the 'DIGILENTINC.COM:ZYBO:PART0:1.0' board part settings. The project part will be reset to 'DIGILENTINC.COM:ZYBO:PART0:1.0' board part.
+INFO: [Project 1-152] Project part set to zynq (xc7z010clg400-1)
+create_bd_design "design_1"
+Wrote  : <D:/Project/warmup/vivado/Z_lab1/Z_lab1.srcs/sources_1/bd/design_1/design_1.bd> 
+update_compile_order -fileset sources_1
+startgroup
+create_bd_cell -type ip -vlnv xilinx.com:ip:processing_system7:5.5 processing_system7_0
+endgroup
+startgroup
+create_bd_cell -type ip -vlnv xilinx.com:ip:axi_gpio:2.0 axi_gpio_0
+endgroup
+apply_bd_automation -rule xilinx.com:bd_rule:processing_system7 -config {make_external "FIXED_IO, DDR" apply_board_preset "1" Master "Disable" Slave "Disable" }  [get_bd_cells processing_system7_0]
+apply_bd_automation -rule xilinx.com:bd_rule:axi4 -config {Master "/processing_system7_0/M_AXI_GP0" intc_ip "New AXI Interconnect" Clk_xbar "Auto" Clk_master "Auto" Clk_slave "Auto" }  [get_bd_intf_pins axi_gpio_0/S_AXI]
+INFO: [Ipptcl 7-1463] No Compatible Board Interface found. Board Tab not created in customize GUI
+</axi_gpio_0/S_AXI/Reg> is being mapped into </processing_system7_0/Data> at <0x41200000 [ 64K ]>
+apply_bd_automation -rule xilinx.com:bd_rule:board -config {Board_Interface "leds_4bits ( leds_4bits ) " }  [get_bd_intf_pins axi_gpio_0/GPIO]
+INFO: [board_rule 100-100] set_property CONFIG.USE_BOARD_FLOW true [get_bd_cells /axi_gpio_0]
+INFO: [board_rule 100-100] set_property CONFIG.GPIO_BOARD_INTERFACE leds_4bits [get_bd_cells /axi_gpio_0]
+INFO: [board_rule 100-100] create_bd_intf_port -mode Master -vlnv xilinx.com:interface:gpio_rtl:1.0 leds_4bits
+INFO: [board_rule 100-100] connect_bd_intf_net /leds_4bits /axi_gpio_0/GPIO
+save_bd_design
+Wrote  : <D:/Project/warmup/vivado/Z_lab1/Z_lab1.srcs/sources_1/bd/design_1/design_1.bd> 
+Wrote  : <D:/Project/warmup/vivado/Z_lab1/Z_lab1.srcs/sources_1/bd/design_1/ui/bd_1f5defd0.ui> 
+validate_bd_design
+make_wrapper -files [get_files D:/Project/warmup/vivado/Z_lab1/Z_lab1.srcs/sources_1/bd/design_1/design_1.bd] -top
+INFO: [BD 41-1662] The design 'design_1.bd' is already validated. Therefore parameter propagation will not be re-run.
+Wrote  : <D:/Project/warmup/vivado/Z_lab1/Z_lab1.srcs/sources_1/bd/design_1/design_1.bd> 
+VHDL Output written to : D:/Project/warmup/vivado/Z_lab1/Z_lab1.srcs/sources_1/bd/design_1/synth/design_1.vhd
+VHDL Output written to : D:/Project/warmup/vivado/Z_lab1/Z_lab1.srcs/sources_1/bd/design_1/sim/design_1.vhd
+VHDL Output written to : D:/Project/warmup/vivado/Z_lab1/Z_lab1.srcs/sources_1/bd/design_1/hdl/design_1_wrapper.vhd
+add_files -norecurse D:/Project/warmup/vivado/Z_lab1/Z_lab1.srcs/sources_1/bd/design_1/hdl/design_1_wrapper.vhd
+open_hw
+launch_runs impl_1 -to_step write_bitstream -jobs 8
+INFO: [BD 41-1662] The design 'design_1.bd' is already validated. Therefore parameter propagation will not be re-run.
+VHDL Output written to : D:/Project/warmup/vivado/Z_lab1/Z_lab1.srcs/sources_1/bd/design_1/synth/design_1.vhd
+VHDL Output written to : D:/Project/warmup/vivado/Z_lab1/Z_lab1.srcs/sources_1/bd/design_1/sim/design_1.vhd
+VHDL Output written to : D:/Project/warmup/vivado/Z_lab1/Z_lab1.srcs/sources_1/bd/design_1/hdl/design_1_wrapper.vhd
+INFO: [BD 41-1029] Generation completed for the IP Integrator block processing_system7_0 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block axi_gpio_0 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block rst_ps7_0_100M .
+WARNING: [IP_Flow 19-4994] Overwriting existing constraint file 'd:/Project/warmup/vivado/Z_lab1/Z_lab1.srcs/sources_1/bd/design_1/ip/design_1_auto_pc_0/design_1_auto_pc_0_ooc.xdc'
+INFO: [BD 41-1029] Generation completed for the IP Integrator block ps7_0_axi_periph/s00_couplers/auto_pc .
+Exporting to file D:/Project/warmup/vivado/Z_lab1/Z_lab1.srcs/sources_1/bd/design_1/hw_handoff/design_1.hwh
+Generated Block Design Tcl file D:/Project/warmup/vivado/Z_lab1/Z_lab1.srcs/sources_1/bd/design_1/hw_handoff/design_1_bd.tcl
+Generated Hardware Definition File D:/Project/warmup/vivado/Z_lab1/Z_lab1.srcs/sources_1/bd/design_1/synth/design_1.hwdef
+[Fri Jan 26 15:23:12 2018] Launched design_1_auto_pc_0_synth_1, design_1_rst_ps7_0_100M_0_synth_1, design_1_processing_system7_0_0_synth_1, design_1_axi_gpio_0_0_synth_1, synth_1...
+Run output will be captured here:
+design_1_auto_pc_0_synth_1: D:/Project/warmup/vivado/Z_lab1/Z_lab1.runs/design_1_auto_pc_0_synth_1/runme.log
+design_1_rst_ps7_0_100M_0_synth_1: D:/Project/warmup/vivado/Z_lab1/Z_lab1.runs/design_1_rst_ps7_0_100M_0_synth_1/runme.log
+design_1_processing_system7_0_0_synth_1: D:/Project/warmup/vivado/Z_lab1/Z_lab1.runs/design_1_processing_system7_0_0_synth_1/runme.log
+design_1_axi_gpio_0_0_synth_1: D:/Project/warmup/vivado/Z_lab1/Z_lab1.runs/design_1_axi_gpio_0_0_synth_1/runme.log
+synth_1: D:/Project/warmup/vivado/Z_lab1/Z_lab1.runs/synth_1/runme.log
+[Fri Jan 26 15:23:12 2018] Launched impl_1...
+Run output will be captured here: D:/Project/warmup/vivado/Z_lab1/Z_lab1.runs/impl_1/runme.log
+launch_runs: Time (s): cpu = 00:00:17 ; elapsed = 00:00:20 . Memory (MB): peak = 1205.285 ; gain = 79.133
+close_hw
+ERROR: [Vivado 12-4452] The hardware handoff file (.sysdef) does not exist. It may not have been generated due to: 
+ 1. A bitstream might not have been generated. Generate Bitstream and export again, or do not request a bitstream to be included in export.
+ 2. There are no block design hardware handoff files. Check the vivado log messages for more details. 
+open_run impl_1
+INFO: [Netlist 29-17] Analyzing 18 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-479] Netlist was created with Vivado 2017.4
+INFO: [Device 21-403] Loading part xc7z010clg400-1
+INFO: [Project 1-570] Preparing netlist for logic optimization
+Parsing XDC File [D:/Project/warmup/vivado/Z_lab1/.Xil/Vivado-7900-hanie/dcp0/design_1_wrapper_board.xdc]
+Finished Parsing XDC File [D:/Project/warmup/vivado/Z_lab1/.Xil/Vivado-7900-hanie/dcp0/design_1_wrapper_board.xdc]
+Parsing XDC File [D:/Project/warmup/vivado/Z_lab1/.Xil/Vivado-7900-hanie/dcp0/design_1_wrapper_early.xdc]
+Finished Parsing XDC File [D:/Project/warmup/vivado/Z_lab1/.Xil/Vivado-7900-hanie/dcp0/design_1_wrapper_early.xdc]
+Reading XDEF placement.
+Reading placer database...
+Reading XDEF routing.
+Read XDEF File: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.259 . Memory (MB): peak = 1458.254 ; gain = 1.176
+Restored from archive | CPU: 0.000000 secs | Memory: 0.000000 MB |
+Finished XDEF File Restore: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.259 . Memory (MB): peak = 1458.254 ; gain = 1.176
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+open_run: Time (s): cpu = 00:00:15 ; elapsed = 00:00:10 . Memory (MB): peak = 1577.598 ; gain = 358.730
+file mkdir D:/Project/warmup/vivado/Z_lab1/Z_lab1.sdk
+file copy -force D:/Project/warmup/vivado/Z_lab1/Z_lab1.runs/impl_1/design_1_wrapper.sysdef D:/Project/warmup/vivado/Z_lab1/Z_lab1.sdk/design_1_wrapper.hdf
+
+launch_sdk -workspace D:/Project/warmup/vivado/Z_lab1/Z_lab1.sdk -hwspec D:/Project/warmup/vivado/Z_lab1/Z_lab1.sdk/design_1_wrapper.hdf
+INFO: [Vivado 12-393] Launching SDK...
+INFO: [Vivado 12-417] Running xsdk -workspace D:/Project/warmup/vivado/Z_lab1/Z_lab1.sdk -hwspec D:/Project/warmup/vivado/Z_lab1/Z_lab1.sdk/design_1_wrapper.hdf
+INFO: [Vivado 12-3157] SDK launch initiated. Please check console for any further messages.
