@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<GenRun Id="impl_1" LaunchPart="xc7z020clg400-1" LaunchTime="1516613795">
+  <File Type="PWROPT-DRC" Name="adr_drc_pwropted.rpt"/>
+  <File Type="OPT-METHODOLOGY-DRC" Name="adr_methodology_drc_opted.rpt"/>
+  <File Type="INIT-TIMING" Name="adr_timing_summary_init.rpt"/>
+  <File Type="ROUTE-PWR-RPX" Name="adr_power_routed.rpx"/>
+  <File Type="PA-TCL" Name="adr.tcl"/>
+  <File Type="OPT-HWDEF" Name="adr.hwdef"/>
+  <File Type="RDI-RDI" Name="adr.vdi"/>
+  <File Type="OPT-DCP" Name="adr_opt.dcp"/>
+  <File Type="OPT-DRC" Name="adr_drc_opted.rpt"/>
+  <File Type="OPT-TIMING" Name="adr_timing_summary_opted.rpt"/>
+  <File Type="PWROPT-DCP" Name="adr_pwropt.dcp"/>
+  <File Type="PWROPT-TIMING" Name="adr_timing_summary_pwropted.rpt"/>
+  <File Type="PLACE-DCP" Name="adr_placed.dcp"/>
+  <File Type="PLACE-IO" Name="adr_io_placed.rpt"/>
+  <File Type="PLACE-CLK" Name="adr_clock_utilization_placed.rpt"/>
+  <File Type="PLACE-UTIL" Name="adr_utilization_placed.rpt"/>
+  <File Type="PLACE-UTIL-PB" Name="adr_utilization_placed.pb"/>
+  <File Type="PLACE-CTRL" Name="adr_control_sets_placed.rpt"/>
+  <File Type="PLACE-SIMILARITY" Name="adr_incremental_reuse_placed.rpt"/>
+  <File Type="PLACE-PRE-SIMILARITY" Name="adr_incremental_reuse_pre_placed.rpt"/>
+  <File Type="PLACE-TIMING" Name="adr_timing_summary_placed.rpt"/>
+  <File Type="POSTPLACE-PWROPT-DCP" Name="adr_postplace_pwropt.dcp"/>
+  <File Type="POSTPLACE-PWROPT-TIMING" Name="adr_timing_summary_postplace_pwropted.rpt"/>
+  <File Type="PHYSOPT-DCP" Name="adr_physopt.dcp"/>
+  <File Type="PHYSOPT-DRC" Name="adr_drc_physopted.rpt"/>
+  <File Type="PHYSOPT-TIMING" Name="adr_timing_summary_physopted.rpt"/>
+  <File Type="ROUTE-ERROR-DCP" Name="adr_routed_error.dcp"/>
+  <File Type="ROUTE-DCP" Name="adr_routed.dcp"/>
+  <File Type="ROUTE-BLACKBOX-DCP" Name="adr_routed_bb.dcp"/>
+  <File Type="ROUTE-DRC" Name="adr_drc_routed.rpt"/>
+  <File Type="ROUTE-DRC-PB" Name="adr_drc_routed.pb"/>
+  <File Type="BG-BIN" Name="adr.bin"/>
+  <File Type="ROUTE-DRC-RPX" Name="adr_drc_routed.rpx"/>
+  <File Type="BG-DRC" Name="adr.drc"/>
+  <File Type="ROUTE-METHODOLOGY-DRC" Name="adr_methodology_drc_routed.rpt"/>
+  <File Type="BITSTR-MSK" Name="adr.msk"/>
+  <File Type="ROUTE-METHODOLOGY-DRC-RPX" Name="adr_methodology_drc_routed.rpx"/>
+  <File Type="BG-BGN" Name="adr.bgn"/>
+  <File Type="ROUTE-METHODOLOGY-DRC-PB" Name="adr_methodology_drc_routed.pb"/>
+  <File Type="ROUTE-PWR" Name="adr_power_routed.rpt"/>
+  <File Type="ROUTE-PWR-SUM" Name="adr_power_summary_routed.pb"/>
+  <File Type="ROUTE-STATUS" Name="adr_route_status.rpt"/>
+  <File Type="ROUTE-STATUS-PB" Name="adr_route_status.pb"/>
+  <File Type="ROUTE-TIMINGSUMMARY" Name="adr_timing_summary_routed.rpt"/>
+  <File Type="ROUTE-TIMING-PB" Name="adr_timing_summary_routed.pb"/>
+  <File Type="ROUTE-TIMING-RPX" Name="adr_timing_summary_routed.rpx"/>
+  <File Type="ROUTE-SIMILARITY" Name="adr_incremental_reuse_routed.rpt"/>
+  <File Type="ROUTE-CLK" Name="adr_clock_utilization_routed.rpt"/>
+  <File Type="POSTROUTE-PHYSOPT-DCP" Name="adr_postroute_physopt.dcp"/>
+  <File Type="POSTROUTE-PHYSOPT-BLACKBOX-DCP" Name="adr_postroute_physopt_bb.dcp"/>
+  <File Type="POSTROUTE-PHYSOPT-TIMING" Name="adr_timing_summary_postroute_physopted.rpt"/>
+  <File Type="POSTROUTE-PHYSOPT-TIMING-PB" Name="adr_timing_summary_postroute_physopted.pb"/>
+  <File Type="POSTROUTE-PHYSOPT-TIMING-RPX" Name="adr_timing_summary_postroute_physopted.rpx"/>
+  <File Type="BG-BIT" Name="adr.bit"/>
+  <File Type="BITSTR-RBT" Name="adr.rbt"/>
+  <File Type="BITSTR-NKY" Name="adr.nky"/>
+  <File Type="BITSTR-BMM" Name="adr_bd.bmm"/>
+  <File Type="BITSTR-MMI" Name="adr.mmi"/>
+  <File Type="BITSTR-SYSDEF" Name="adr.sysdef"/>
+  <File Type="WBT-USG" Name="usage_statistics_webtalk.html"/>
+  <FileSet Name="sources" Type="DesignSrcs" RelSrcDir="$PSRCDIR/sources_1">
+    <Filter Type="Srcs"/>
+    <File Path="$PPRDIR/adr.vhd">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <Config>
+      <Option Name="DesignMode" Val="RTL"/>
+      <Option Name="TopModule" Val="adr"/>
+      <Option Name="TopAutoSet" Val="TRUE"/>
+    </Config>
+  </FileSet>
+  <FileSet Name="constrs_in" Type="Constrs" RelSrcDir="$PSRCDIR/constrs_1">
+    <Filter Type="Constrs"/>
+    <File Path="$PPRDIR/ZT.xdc">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+      </FileInfo>
+    </File>
+    <Config>
+      <Option Name="ConstrsType" Val="XDC"/>
+    </Config>
+  </FileSet>
+  <Strategy Version="1" Minor="2">
+    <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2017">
+      <Desc>Default settings for Implementation.</Desc>
+    </StratHandle>
+    <Step Id="init_design"/>
+    <Step Id="opt_design"/>
+    <Step Id="power_opt_design"/>
+    <Step Id="place_design"/>
+    <Step Id="post_place_power_opt_design"/>
+    <Step Id="phys_opt_design"/>
+    <Step Id="route_design"/>
+    <Step Id="post_route_phys_opt_design"/>
+    <Step Id="write_bitstream"/>
+  </Strategy>
+</GenRun>

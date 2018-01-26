@@ -1,0 +1,34 @@
+Copyright 1986-2017 Xilinx, Inc. All Rights Reserved.
+-------------------------------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2017.2_sdx (win64) Build 1972098 Wed Aug 23 11:34:46 MDT 2017
+| Date         : Mon Jan 22 13:24:01 2018
+| Host         : hanie running 64-bit Service Pack 1  (build 7601)
+| Command      : report_methodology -file adr_methodology_drc_routed.rpt -rpx adr_methodology_drc_routed.rpx
+| Design       : adr
+| Device       : xc7k325tffg900-2
+| Speed File   : -2
+| Design State : Routed
+-------------------------------------------------------------------------------------------------------------
+
+Report Methodology
+
+Table of Contents
+-----------------
+1. REPORT SUMMARY
+2. REPORT DETAILS
+
+1. REPORT SUMMARY
+-----------------
+            Netlist: netlist
+          Floorplan: design_1
+      Design limits: <entire design considered>
+             Max violations: <unlimited>
+             Violations found: 0
++------+----------+-------------+------------+
+| Rule | Severity | Description | Violations |
++------+----------+-------------+------------+
++------+----------+-------------+------------+
+
+2. REPORT DETAILS
+-----------------
+

@@ -1,0 +1,14 @@
+#-----------------------------------------------------------
+# Vivado v2017.2_sdx (64-bit)
+# SW Build 1972098 on Wed Aug 23 11:34:46 MDT 2017
+# IP Build 1971916 on Wed Aug 23 13:11:02 MDT 2017
+# Start of session at: Mon Jan 22 19:28:46 2018
+# Process ID: 9452
+# Current directory: D:/Project/warmup/vivado/KC_halfAdder
+# Command line: vivado.exe D:\Project\warmup\vivado\KC_halfAdder\KC_halfAdder.xpr
+# Log file: D:/Project/warmup/vivado/KC_halfAdder/vivado.log
+# Journal file: D:/Project/warmup/vivado/KC_halfAdder\vivado.jou
+#-----------------------------------------------------------
+start_gui
+open_project D:/Project/warmup/vivado/KC_halfAdder/KC_halfAdder.xpr
+update_compile_order -fileset sources_1

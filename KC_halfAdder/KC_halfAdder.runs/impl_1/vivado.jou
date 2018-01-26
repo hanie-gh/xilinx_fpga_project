@@ -1,0 +1,12 @@
+#-----------------------------------------------------------
+# Vivado v2017.2_sdx (64-bit)
+# SW Build 1972098 on Wed Aug 23 11:34:46 MDT 2017
+# IP Build 1971916 on Wed Aug 23 13:11:02 MDT 2017
+# Start of session at: Mon Jan 22 13:23:20 2018
+# Process ID: 2776
+# Current directory: D:/Project/warmup/vivado/KC_halfAdder/KC_halfAdder.runs/impl_1
+# Command line: vivado.exe -log adr.vdi -applog -product Vivado -messageDb vivado.pb -mode batch -source adr.tcl -notrace
+# Log file: D:/Project/warmup/vivado/KC_halfAdder/KC_halfAdder.runs/impl_1/adr.vdi
+# Journal file: D:/Project/warmup/vivado/KC_halfAdder/KC_halfAdder.runs/impl_1\vivado.jou
+#-----------------------------------------------------------
+source adr.tcl -notrace
