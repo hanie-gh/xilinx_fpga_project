@@ -1,0 +1,12 @@
+#-----------------------------------------------------------
+# Vivado v2017.4 (64-bit)
+# SW Build 2086221 on Fri Dec 15 20:55:39 MST 2017
+# IP Build 2085800 on Fri Dec 15 22:25:07 MST 2017
+# Start of session at: Fri Jan 26 16:05:07 2018
+# Process ID: 5856
+# Current directory: D:/Project/warmup/vivado/Z_lab2/Z_lab2.runs/interupts_rst_ps7_0_100M_2_synth_1
+# Command line: vivado.exe -log interupts_rst_ps7_0_100M_2.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source interupts_rst_ps7_0_100M_2.tcl
+# Log file: D:/Project/warmup/vivado/Z_lab2/Z_lab2.runs/interupts_rst_ps7_0_100M_2_synth_1/interupts_rst_ps7_0_100M_2.vds
+# Journal file: D:/Project/warmup/vivado/Z_lab2/Z_lab2.runs/interupts_rst_ps7_0_100M_2_synth_1\vivado.jou
+#-----------------------------------------------------------
+source interupts_rst_ps7_0_100M_2.tcl -notrace
